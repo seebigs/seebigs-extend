@@ -1,0 +1,21 @@
+{
+  "name": "seebigs-extend",
+  "version": "1.0.0",
+  "description": "Does a deep extend and clone of whatever params are passed",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seebigs/seebigs-extend.git"
+  },
+  "author": "Chris Bigelow <seebigswork@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seebigs/seebigs-extend/issues"
+  },
+  "dependencies": {
+    "seebigs-each": "^1.1.0"
+  }
+}
