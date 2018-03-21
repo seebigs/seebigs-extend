@@ -19,8 +19,9 @@ function toString(thing) {
 
 
 describe('combines properties from both into one object', (desc) => {
-    var returnedObj = extend({ bat: 'man' }, { bat: 'girl', super: 'man', spider: 'man' });
+    var returnedObj = extend({ bat: 'man', ant: 'man' }, { bat: 'girl', super: 'man', spider: 'man' });
     shouldEqual(returnedObj.bat, 'girl', desc);
+    shouldEqual(returnedObj.ant, 'man', desc);
     shouldEqual(returnedObj.super, 'man', desc);
     shouldEqual(returnedObj.spider, 'man', desc);
 });
@@ -48,7 +49,14 @@ describe('handles null', (desc) => {
     shouldEqual(keys[0], 'a', desc);
 });
 
-describe('clones every property the way we want', (desc) => {
+describe('does a shallow extend (overwrites all properties one level deep)', (desc) => {
+    var returnedObj = extend({ a: { b:1, c:1 } }, { a: { c:2, d:2 } });
+    shouldEqual(returnedObj.a.b, void 0, desc);
+    shouldEqual(returnedObj.a.c, 2, desc);
+    shouldEqual(returnedObj.a.d, 2, desc);
+});
+
+describe('clones every value the way we want', (desc) => {
     var goodMe = {
         undef: void 0,
         booltrue: true,

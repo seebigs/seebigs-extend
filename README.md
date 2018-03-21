@@ -1,28 +1,33 @@
 # seebigs-extend
 
-Does a deep extend and clone of whatever params are passed. The first argument is mutated. Undefined values are ignored.
+Does a shallow extend but clones whatever values are passed.
+
+*The first argument is mutated. Undefined values are ignored.*
 
 ```js
 var extend = require('seebigs-extend');
 
-var obj = {
+var one = {
     a: {
         b: 1,
         c: 1,
     }
 };
 
-extend(obj, {
-    a: {
-        c: 2,
-        d: 2,
-    }
+var two = {
+    c: 2,
+    d: 2,
+};
+
+extend(one, {
+    a: two
 });
 
-/* obj ===
+two.d = 3;
+
+/* one ===
 {
     a: {
-        b: 1,
         c: 2,
         d: 2,
     }
