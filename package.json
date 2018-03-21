@@ -1,6 +1,6 @@
 {
   "name": "seebigs-extend",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Does a deep extend and clone of whatever params are passed",
   "main": "index.js",
   "scripts": {
