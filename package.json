@@ -1,7 +1,7 @@
 {
   "name": "seebigs-extend",
-  "version": "2.0.0",
-  "description": "Does a deep extend and clone of whatever params are passed",
+  "version": "2.0.1",
+  "description": "Does a shallow extend but clones whatever values are passed",
   "main": "index.js",
   "scripts": {
     "test": "node test"
